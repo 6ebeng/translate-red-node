@@ -1,4 +1,4 @@
-# node-red-contrib-google-translate-fixed
+# node-red-contrib-google-translate-fixed (new)
 Node-RED node for Google Translate
 
 Now you can choose the language using the payload!
