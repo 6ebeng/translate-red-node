@@ -87,6 +87,7 @@ Language codes
 </br>'kk' Kazakh
 </br>'km' Khmer
 </br>'ku' Kurdish (Kurmanji)
+</br>'ckb' Kurdish (Sorani)
 </br>'ky' Kyrgyz
 </br>'lo' Lao
 </br>'la' Latin
