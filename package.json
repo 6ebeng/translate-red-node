@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-google-translate-plus",
+  "name": "node-red-contrib-google-translate-extend",
   "version": "0.4.7",
   "description": "Node-RED node for Google Translate",
   "main": "node.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@6ebeng/google-translate-api-rocket": "8.0.1"
+    "google-translate-api-extend": "8.0.1"
   },
   "node-red": {
     "nodes": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/6ebeng/translate-red-node-rocket.git"
+    "url": "git+https://github.com/6ebeng/translate-red-node.git"
   },
   "keywords": [
     "node-red",
