@@ -18,7 +18,7 @@ module.exports = function (RED) {
             if (msg.payload.input) {
                 input = msg.payload.input;
             } else {
-                input = '';
+                input = msg.payload + '';
             }
             await translate(input, conf).then(function (res) {
                 msg.payload = res;
