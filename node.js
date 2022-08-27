@@ -20,12 +20,15 @@ module.exports = function (RED) {
             } else {
                 input = msg.payload + '';
             }
-            translate(input, conf).then(function (res) {
-                msg.payload = {} = res;
+
+            try{
+                const res = await translate(input, conf);
+                msg.payload = res;
                 node.send(msg);
-            }).catch(function (err) {
+            }
+             catch(err){
                 node.error(err);
-            });
+            };
         });
     }
 
