@@ -1,13 +1,13 @@
 {
   "name": "node-red-contrib-google-translate-extend",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "Node-RED node for Google Translate",
   "main": "node.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "google-translate-api-extend": "8.0.1"
+    "google-translate-api-x": "10.4.1"
   },
   "node-red": {
     "nodes": {

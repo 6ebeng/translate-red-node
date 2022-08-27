@@ -1,6 +1,6 @@
 module.exports = function (RED) {
     "use strict";
-    var translate = require('google-translate-api-extend');
+    var translate = require('google-translate-api-x');
 
     function GoogleTranslateNode(config) {
         RED.nodes.createNode(this, config);
