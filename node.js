@@ -20,7 +20,7 @@ module.exports = function (RED) {
             } else {
                 input = msg.payload + '';
             }
-            await translate(input, conf).then(function (res) {
+            translate(input, conf).then(function (res) {
                 msg.payload = res;
                 node.send(msg);
             }).catch(function (err) {
