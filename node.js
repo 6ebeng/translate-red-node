@@ -21,7 +21,7 @@ module.exports = function (RED) {
                 input = msg.payload + '';
             }
             translate(input, conf).then(function (res) {
-                msg.payload = res;
+                msg.payload = {} = res;
                 node.send(msg);
             }).catch(function (err) {
                 node.error(err);
