@@ -9,7 +9,7 @@ module.exports = function (RED) {
         this.on('input', function (msg) {
             msg.config = conf;
             var conf = { to: config.to };
-            var input = msg.payload;
+            var input = msg.payload + '';
             if (config.from === 'prog' && config.to === 'prog') {
                 conf = { from: msg.payload.from, to: msg.payload.to }
             } else if (config.from === 'auto' && config.to === 'prog') {
@@ -20,13 +20,10 @@ module.exports = function (RED) {
             } else {
                 input = msg.payload + '';
             }
-
+            
             try{
-                const res = translate(input, conf);
-                msg.payload = res;
-                node.send(msg);
-            }
-             catch(err){
+                msg.payload = translate(input, conf);
+            } catch(err) {
                 node.error(err);
             };
         });
