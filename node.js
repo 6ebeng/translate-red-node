@@ -18,11 +18,12 @@ module.exports = function (RED) {
             if (msg.payload.input) {
                 input = msg.payload.input;
             }
-            try{
-                msg.payload = await translate(input + '', conf);
-            } catch(err) {
+            translate(input + '', conf).then((result) => {
+                msg.payload = result.text;
+                node.send(msg);
+            }).catch(function (err) {
                 node.error(err);
-            };
+            });
         });
     }
 
