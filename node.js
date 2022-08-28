@@ -17,12 +17,9 @@ module.exports = function (RED) {
             }
             if (msg.payload.input) {
                 input = msg.payload.input;
-            } else {
-                input = msg.payload + '';
             }
-
             try{
-                msg.payload = await translate(input, conf);
+                msg.payload = await translate(input + '', conf);
             } catch(err) {
                 node.error(err);
             };
