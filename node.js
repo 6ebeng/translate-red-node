@@ -20,9 +20,9 @@ module.exports = function (RED) {
             } else {
                 input = msg.payload + '';
             }
-            
+
             try{
-                msg.payload = translate(input, conf);
+                msg.payload = await translate(input, conf);
             } catch(err) {
                 node.error(err);
             };
